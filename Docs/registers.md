@@ -3,17 +3,17 @@ This Document lays out all of the Available registers their names and Usages. as
 
 ## General thoughts
 I'll be borrowing the naming convention from ARM CPUs to keep things simple  
-I'm currently planning to have 4 Working Registers: "r-0" to "r-4"  
+I'm currently planning to have 4 Working Registers: "r-0" to "r-3"  
 there will also be a "scratch register" ["rs"](#rs) which is basically arms r12  
 to that are the functional Registers. "pc", "lr", "sp"  
 to help with a couple of the instructions i will also all 2 buffer registers that can hold data but are not directly used to work with. calling then b1 and b2
 
 ---
 ## Vertical layout
+- r0  (working register)
 - r1  (working register)
-- r2  (working register)
-- r3  (working register / argument register)
-- r4  (working register / argument register / return register)
+- r2  (working register / argument register)
+- r3  (working register / argument register / return register)
 - rs  (scratch register)
 - b1 (buffer register)
 - b2 (buffer register)
@@ -28,7 +28,7 @@ to help with a couple of the instructions i will also all 2 buffer registers tha
 ## why these registers?
 Well looking back at my first cpu that had a much simpler layout: two working registers, one buffer, and a PC counter. (technically also and IR but that one wasn't exposed to the running program)
 Working out instructions was doable but it would have involved moving a lot more data around when ever there was an even more complicated program.
-That's why i added four working registers. but to keep things "more compact" i decided to give register r3 and r4 the label of argument register, and r4 specifically the register for the return value.
+That's why i added four working registers. but to keep things "more compact" i decided to give register r2 and r3 the label of argument register, and r3 specifically the register for the return value.
 
 ## "rs" 
 this might be a very confusing register. As described in the [General thoughts](#general-thoughts) this is a "Scratch Register" meaning that this can be used to hold very temporary information or used to hold iterators for loops. this register won't be considered to be a "preserved" register and will needed to be explicitly saved to the stack appon entering a new function call if that function call requires an iterator.
