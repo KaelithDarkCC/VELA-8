@@ -19,13 +19,16 @@ This project is in it's infancy and is going through the early stages of plannin
 --------------------
 ## Roadmap for Phase I
   1. Plan out the needed hardware and control logic
+     
      1.1 Planning out what hardware is needed, such as Working Registers, Buffers, ROM, RAM (cash), Program Counter, ALU, Bus access and data flow, Flag Handling.
      1.2 Planning out the decode of the instruction to Opcode to Control signals
-  2. Planning out the ISA.
+  3. Planning out the ISA.
+     
      2.1 Planning out Instructions and Opcode.
      2.2 Destination, Source and control matrices
-     2.3 Micro code decoding.
-  3. Implimentation of Opcode and Microcode
-  4. Running the first test programs
+     2.3 Micro code decoding
+     
+  5. Implimentation of Opcode and Microcode
+  6. Running the first test programs
 
      -- This Roadmap is subject to change as the project continues --
