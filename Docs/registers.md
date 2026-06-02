@@ -9,19 +9,19 @@ to that are the functional Registers. "pc", "lr", "sp"
 to help with a couple of the instructions i will also all 2 buffer registers that can hold data but are not directly used to work with. calling then b1 and b2
 
 ---
-## Vertical layout
-- r0  (working register)
-- r1  (working register)
-- r2  (working register / argument register)
-- r3  (working register / argument register / return register)
-- rs  (scratch register)
-- b1 (buffer register)
-- b2 (buffer register)
-
-
-- sp (stack pointer)
-- lr (link register)
-- pc (program counter)
+## Layout
+| Register |                  Type                 |                            Note                           |
+|----------|:-------------------------------------:|:---------------------------------------------------------:|
+| **r0**   |            Working Register           |                      General Purpose                      |
+| **r1**   |            Working Register           |                      General Purpose                      |
+| **r2**   |      Working Register / Argument      |            General Purpose / Passing Arguments            |
+| **r3**   | Working Register / Arguments / Return |   General Purpose / Passing Arguments / Returning Values  |
+| **rs**   |            Scratch Register           |                Temporary Values / Iterators               |
+| **b1**   |            Buffer Register            |               Holding Values / Not workable               |
+| **b2**   |            Buffer Register            |               Holding Values / Not workable               |
+| **sp**   |             Stack Pointer             |           Points to the last Stack Entry address          |
+| **lr**   |             Link Register             | Hold the next address from the pc before a Jump or branch |
+| **pc**   |            Program Counter            |  points to the current address in ram of the instruction  |
 
 ---
 
