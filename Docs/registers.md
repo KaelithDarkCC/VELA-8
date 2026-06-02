@@ -31,7 +31,7 @@ Working out instructions was doable but it would have involved moving a lot more
 That's why i added four working registers. but to keep things "more compact" i decided to give register r2 and r3 the label of argument register, and r3 specifically the register for the return value.
 
 ## "rs" 
-this might be a very confusing register. As described in the [General thoughts](#general-thoughts) this is a "Scratch Register" meaning that this can be used to hold very temporary information or used to hold iterators for loops. this register won't be considered to be a "preserved" register and will needed to be explicitly saved to the stack appon entering a new function call if that function call requires an iterator.
+this might be a very confusing register. As described in the [General thoughts](#general-thoughts) this is a "Scratch Register" meaning that this can be used to hold very temporary information or used to hold iterators for loops. this register won't be considered to be a "preserved" register and will needed to be explicitly saved to the stack upon entering a new function call if that function call requires an iterator.
 
 ## "b1 and b2"
 I technically wouldn't need two Buffer registers but i don't see a HUGE problem integrating two and it makes programming simpler down the line. these Registers specifically aren't design to be worked with (meaning they are not made to expose their value to the ALU) they are just there to hold an information for something like a MOV operation that moves a piece of data from one address to another.
