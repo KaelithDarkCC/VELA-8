@@ -11,18 +11,7 @@ The CPU will contain a basic set of components. Control Unit, Registers (also se
 
 ---
 ### ASCII Block diagram  
-```
-                    Control Signals
-         |---------------------------------------------|
-         ↓              ↓                   ↓          ↓
-  |------------|   |---------|   |------------|     |-----|
-  | Control    |   | Memory  |   | Registers  | --> | ALU |
-  | Unit / PC  |   |         |   |            | <-- |     |
-  |------------|   |---------|   |------------|     |-----|
-         ↑              ↑               ↑
-         |______________|_______________|
-                   Address / Data Bus
-```
+![VELA-8-R Block Diagram](../assets/VELA_block_diagram.drawio.png)
 ---
 ### Data Flow  
 VELA-8 R is going to use a very basic data flow layout. Fetch -> Decode -> Execute.
