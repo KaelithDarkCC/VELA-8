@@ -5,7 +5,7 @@ This Document lays out all of the Available registers their names and Usages. as
 I'll be borrowing the naming convention from ARM CPUs to keep things simple  
 I'm currently planning to have 4 Working Registers: "r-0" to "r-3"  
 there will also be a "scratch register" ["rs"](#rs) which is basically arms r12  
-to that are the functional Registers. "pc", "lr", "sp"  
+to that are the functional Registers. "pc", "lr", "sp", "cpsr"
 to help with a couple of the instructions i will also all 2 buffer registers that can hold data but are not directly used to work with. calling then b1 and b2
 
 ---
@@ -22,6 +22,7 @@ to help with a couple of the instructions i will also all 2 buffer registers tha
 | **sp**   |             Stack Pointer             |           Points to the last Stack Entry address          |
 | **lr**   |             Link Register             | Hold the next address from the pc before a Jump or branch |
 | **pc**   |            Program Counter            |  points to the current address in ram of the instruction  |
+| **cpsr** |    Current Program Status Register    |                  N, Z, C, V Flag Register                 |
 
 ---
 
