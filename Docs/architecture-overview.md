@@ -10,9 +10,9 @@ VELA-8 is an 8 bit data, 16 bit address line CPU. The VELA-8 R Architecture is a
 The CPU will contain a basic set of components. Control Unit, Registers (also see [Registers](/Docs/registers.md)), ALU, Memory, Data and Address Bus, Control wiring.  
 
 ---
-### ASCII Block diagram  
+### Block diagram  
 ![VELA-8-R Block Diagram](../assets/VELA_block_diagram.drawio.png)
 ---
 ### Data Flow  
 VELA-8 R is going to use a very basic data flow layout. Fetch -> Decode -> Execute.
-Per instruction cycle: PC address -> Fetching Instructions -> Decode instruction -> Sets Control Signals according to Operants and args -> Loads imms or memory in to Registers or stores values from registers in to memory or other registers.  
+Per instruction cycle: PC address -> Fetching Instructions -> Decode instruction -> Sets Control Signals according to Operands and args -> Loads imms or memory in to Registers or stores values from registers in to memory or other registers.  
